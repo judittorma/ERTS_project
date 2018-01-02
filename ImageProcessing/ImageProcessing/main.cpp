@@ -241,7 +241,7 @@ int main()
 
 	SaveImage(ResImg);
 
-	// close after obtaining any key
+	// close console window after obtaining any key
 	getchar();
 
 	return 0;
