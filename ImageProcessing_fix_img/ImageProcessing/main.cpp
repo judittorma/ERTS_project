@@ -228,8 +228,6 @@ void Filter(std::vector<std::vector<unsigned int> > &dst,
 	if (kernelType == KernelType::None)
 		return;	// skip filtering
 
-	//int srcRows = 101;
-	//int srcCols = 97;
 	int srcRows = sizeof InputImage / sizeof InputImage[0];
 	int srcCols = sizeof InputImage[0] / sizeof(int);
 	dst.resize(srcRows);
@@ -241,7 +239,7 @@ void Filter(std::vector<std::vector<unsigned int> > &dst,
 		for (int j = 0; j < srcCols; ++j)
 		{
 			float temp = 0.0;
-			int ik = 5 / 2;
+			int ik = -5 / 2;
 			for (int k = 0; k < 5; ++k)
 			{
 				int jl = -5 / 2;
